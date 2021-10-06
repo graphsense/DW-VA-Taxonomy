@@ -94,3 +94,11 @@ pyramid_scheme:
       themselves are induced to recruit further victims through the payment of recruitment commissions.
   seeAlso: https://www.fbi.gov/scams-and-safety/common-scams-and-crimes/pyramid-schemes
   broader: ponzi_scheme
+
+sanction:
+  id: sanction
+  type: concept
+  prefLabel: Sanction List
+  description: >
+      An entry appears on a sanction list published by governments and international
+      authorities to combat illegal activities.
