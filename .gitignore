@@ -4,3 +4,4 @@ _site
 .jekyll-cache
 *.sublime*
 .DS_Store
+vendor/

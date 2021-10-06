@@ -2,14 +2,16 @@ scheme:
   baseurl: /taxonomies/entities
   csvfile: /assets/data/entities.csv  
   type: conceptScheme
-  version: 0.1
-  lastmod: 2020-03-31
+  version: 0.2
+  lastmod: 2021-10-06
   title: Entity Taxonomy
   creator: INTERPOL Darknet and Cryptocurrencies Working Group
   description: >
    This taxonomy defines entities that represent real-world actors
    and service that are part of a larger Darknet- and Cryptoasset Ecosystems.
   default_language: en
+
+# Top concept
 
 entity:
   id: entity
@@ -19,7 +21,9 @@ entity:
     An actor is anything playing an active role in Darknets or Cryptoasset
     ecosystems. This subsumes individuals and organizations as well as automated
     services fulfilling a certain function in such environments.
-  narrower: [organization, user, service]
+  narrower: [organization, user, service, item]
+
+# High-level concepts
 
 organization:
   id: organization
@@ -39,6 +43,15 @@ user:
     and / or offered services.
   broader: entity
 
+item:
+  id: item
+  type: concept
+  prefLabel: Item
+  description: >
+    A digital or non-digital item.
+  broader: entity
+  narrower: collectible
+
 service:
   id: service
   type: concept
@@ -49,18 +62,17 @@ service:
   broader: entity
   narrower: [exchange, filesharing, index, market, messaging_service, mixing_service, search_engine, shop]
 
+
+# Specific concepts: services
+
 exchange:
   id: exchange
   type: concept
   prefLabel: Exchange
   description: >
-    A cryptocurrency exchange or a digital currency exchange (DCE)
-    is a business that allows customers to trade cryptocurrencies or
-    digital currencies for other assets, such as conventional fiat
-    money or other digital currencies. A cryptocurrency exchange can
-    be a market maker that typically takes the bid-ask spreads as a
-    transaction commission for is service or, as a matching platform,
-    simply charges fees.
+    A centralized cryptocurrency exchange (CEX) is a business that allows customers
+    to trade cryptocurrencies or digital currencies for other assets, such as
+    conventional fiat money or other digital currencies.
   seeAlso: https://en.wikipedia.org/wiki/Cryptocurrency_exchange
   broader: service
 
@@ -69,10 +81,36 @@ wallet_service:
   type: concept
   prefLabel: Wallet Service
   description: >
-    A wallet is a software or web service that custodizes and utilizes cryptoasset
+    A wallet service is a software or web service that custodizes and utilizes cryptoasset
     keys on behalf of their users.
   broader: service
+
+escrow_wallet:
+  id: escrow_wallet
+  type: concept
+  prefLabel: Escrow Wallet
+  description: >
+    An escrow service is a mediator service that keeps the money for a transaction in
+    safekeeping until the coins are handed over.
+  broader: wallet_service
+  seeAlso: https://99bitcoins.com/bitcoin/escrow/
     
+ico_wallet:
+  id: ico_wallet
+  type: concept
+  prefLabel: ICO Wallet
+  description: >
+    A wallet that has been used for Initial Coin Offerings (ICOs).
+  broader: wallet_service
+
+cold_wallet:
+  id: cold_wallet
+  type: concept
+  prefLabel: Cold Wallet
+  description: >
+    A wallet that is not connected to the Internet and controlled by some user.
+  broader: service
+
 filesharing:
   id: filesharing
   type: concept
@@ -112,10 +150,10 @@ messaging_service:
   seeAlso: https://en.wikipedia.org/wiki/Instant_messaging
   broader: service
 
-mixing_service:
-  id: mixing_service
+mixer:
+  id: mixer
   type: concept
-  prefLabel: Mixing Service
+  prefLabel: Mixer
   description: >
     A tumbler or mixing service is a service offered to mix potentially identifiable
     or 'tainted' cryptoasset funds with others, so as to obscure the trail back to the
@@ -123,6 +161,17 @@ mixing_service:
     usually bitcoin (hence Bitcoin mixer), since the currencies provide a public ledger of all transactions.
   seeAlso: https://en.wikipedia.org/wiki/Cryptocurrency_tumbler
   broader: service
+
+coinjoin:
+  id: coinjoin
+  type: concept
+  prefLabel: CoinJoin
+  description: >
+    CoinJoin is an anonymization strategy that protects the privacy of Bitcoin users when they
+    conduct transactions with each other, obscuring the sources and destinations of BTC used in
+    transactions.
+  seeAlso: https://www.investopedia.com/terms/c/coinjoin.asp
+  broader: mixing_service
 
 miner:
   id: miner
@@ -166,3 +215,77 @@ shop:
      Internet using a web browser.
   seeAlso: https://en.wikipedia.org/wiki/Online_shopping
   broader: service
+
+faucet:
+  id: faucet
+  type: concept
+  prefLabel: Faucet
+  description: >
+    A faucet can be defined as a reward system from which small amounts of coins
+    can be rewarded
+  seeAlso: https://coinmarketcap.com/alexandria/article/what-is-a-crypto-faucet
+  broader: service
+
+payment_processor:
+  id: payment_processor
+  type: concept
+  prefLabel: Payment Processor
+  description: >
+    A platform for online transactions that serves as a gateway and helps companies
+    accept payments in cryptocurrencies
+  broader: service
+
+atm:
+  id: atm
+  type: concept
+  prefLabel: Cryptoasset ATM
+  description: >
+    A physical kiosk that allows users to exchange cryptoassets and fiat currencies.
+  broader: service
+
+defi:
+  id: defi
+  type: concept
+  prefLabel: DeFi Protocol
+  description: >
+    A program offering financial services in the form of smart contracts.
+  broader: service
+
+defi_lending:
+  id: defi_lending
+  type: concept
+  prefLabel: Lending Protocol
+  description: >
+    A DeFi protocol that lets users lend and borrow cryptoassets without having to go
+    through a centralized intermediary
+  broader: defi
+  example: [compound.finance, aave.com, makerdao.com]
+
+defi_dex:
+  id: defi_dex
+  type: concept
+  prefLabel: Decentralized Exchange (DEX)
+  description: >
+    A type of cryptocurrency exchange which allows for direct peer-to-peer cryptocurrency
+    transactions to take place online securely and without the need for an intermediary.
+  broader: defi
+  example: [curve.fi, uniswap.org]
+
+defi_derivatives:
+  id: defi_derivative
+  type: concept
+  prefLabel: Derivative
+  description: >
+    A contract between two or more parties whose value is based on an agreed-upon
+    underlying financial (crypto)asset.
+
+# Specific concepts: items
+
+collectible:
+  id: collectible
+  type: concept
+  prefLabel: Collectible
+  description: >
+    A collectible refers to an item that is worth far more than it was originally sold for
+    because of its rarity and/or popularity.
+  broader: item

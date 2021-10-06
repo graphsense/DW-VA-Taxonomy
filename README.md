@@ -11,17 +11,13 @@ Checkout this git repository to your local machine
 	git clone git@github.com:INTERPOL-Innovation-Centre/DW-VA-Taxonomy.git
 	cd DW-VA-Taxonomy
 
-Make sure you have [Jekyll][jekyll] installed
+Use docker to incrementally compile and watch the site
 
-	gem install bundler jekyll
-
-Run Jekyll locally
-
-	bundle exec jekyll serve --baseurl '' --watch
+ 	docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" --env JEKYLL_ENV=development -p 4000:4000 jekyll/jekyll:4 jekyll serve
 
 Access the taxonomy website locallly using your browser
 
-	http://127.0.0.1:4000/
+	http://0.0.0.0:4000/DW-VA-Taxonomy/
 
 ## How to create / modify / delete concept defintions
 
@@ -53,10 +49,7 @@ and [narrower](https://www.w3.org/2009/08/skos-reference/skos.html#narrower) rel
 	    A cryptocurrency exchange or a digital currency exchange (DCE)
 	    is a business that allows customers to trade cryptocurrencies or
 	    digital currencies for other assets, such as conventional fiat
-	    money or other digital currencies. A cryptocurrency exchange can
-	    be a market maker that typically takes the bid-ask spreads as a
-	    transaction commission for is service or, as a matching platform,
-	    simply charges fees.
+	    money or other digital currencies.
 	  seeAlso: https://en.wikipedia.org/wiki/Cryptocurrency_exchange
 	  broader: service
 
@@ -118,3 +111,4 @@ Well, mostly for technical and usability reasons. Jekyll can read and parse YAML
 [jekyll]: https://jekyllrb.com/
 [python]: https://www.python.org/
 [skos]: https://www.w3.org/2004/02/skos/
+[docker]: https://www.docker.com/
