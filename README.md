@@ -66,7 +66,7 @@ Before running the script, make sure you have Python 3 up and running and instal
 	python3 -m venv venv
 	. venv/bin/activate
 
-	pip install -r requirements
+	pip install -r requirements.txt
 
 Then run the conversion script by passing the taxonomy YAML files and an optional output folder (which is `assets/data` by default.
 
