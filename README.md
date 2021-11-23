@@ -64,7 +64,7 @@ In order to provide machine-processable, downloadable taxonomy representations, 
 Before running the script, make sure you have Python3 up and running and install the dependencies.
 
 	python3 -m venv venv
-	. venv/bin/activate
+	source venv/bin/activate
 
 	pip install -r requirements
 
