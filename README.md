@@ -2,24 +2,24 @@
 
 This repository contains taxonomies covering common types of entities found in Dark Web and Virtual Assets ecosystems, as well as abusive, possibly criminal behaviors found in real-world investigations.
 
-Taxonomies are defined as [YAML][yaml] files and automatically rendered as a human-readable Website by using the [Jekyll][jekyll] static site generator: https://interpol-innovation-centre.github.io/DW-VA-Taxonomy/
+Taxonomies are defined as [YAML][yaml] files and automatically rendered as a human-readable Website by using the [Jekyll][jekyll] static site generator: https://graphsense.info/DW-VA-Taxonomy/
 
 ## How to run the Website locally
 
 Checkout this git repository to your local machine
 
-	git clone git@github.com:INTERPOL-Innovation-Centre/DW-VA-Taxonomy.git
+	git clone git@github.com:graphsense/DW-VA-Taxonomy.git
 	cd DW-VA-Taxonomy
 
 Use docker to incrementally compile and watch the site
 
  	docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" --env JEKYLL_ENV=development -p 4000:4000 jekyll/jekyll:4 jekyll serve
 
-Access the taxonomy website locallly using your browser
+Access the taxonomy website locally using your browser
 
 	http://0.0.0.0:4000/DW-VA-Taxonomy/
 
-## How to create / modify / delete concept defintions
+## How to create / modify / delete concept definitions
 
 All taxonomy definition YAML-files reside in the [\_data](_data) directory.
 
@@ -27,7 +27,7 @@ Each taxonomy file defines a so-called [(concept) **scheme**](https://www.w3.org
 
 	scheme:
 	  baseurl: /taxonomies/entities
-	  csvfile: assets/data/entities.csv  
+	  csvfile: assets/data/entities.csv
 	  type: conceptScheme
 	  version: 0.1
 	  lastmod: 2020-03-31
@@ -39,7 +39,7 @@ Each taxonomy file defines a so-called [(concept) **scheme**](https://www.w3.org
 	  default_language: en
 
 Further it defines a number of concepts that are linked with each other through [broader](https://www.w3.org/2009/08/skos-reference/skos.html#broader)
-and [narrower](https://www.w3.org/2009/08/skos-reference/skos.html#narrower) relations and therefore form a hierarchical strucuture. The `seeAlso`relation can be used for referencing external defintion sources.
+and [narrower](https://www.w3.org/2009/08/skos-reference/skos.html#narrower) relations and therefore form a hierarchical structure. The `seeAlso`relation can be used for referencing external definition sources.
 
 	exchange:
 	  id: exchange
@@ -53,7 +53,7 @@ and [narrower](https://www.w3.org/2009/08/skos-reference/skos.html#narrower) rel
 	  seeAlso: https://en.wikipedia.org/wiki/Cryptocurrency_exchange
 	  broader: service
 
-A taxonomy can be modified by changing these defintions. 
+A taxonomy can be modified by changing these definitions.
 
 ## How to generate downloadable CSV files from defined taxonomies
 
@@ -61,12 +61,12 @@ The taxonomy YAML files in `_data` feed the [Jekyll static Website generator][je
 
 In order to provide machine-processable, downloadable taxonomy representations, they must first be converted into (a) commonly accepted format(s) and provided as downloadable files. This is what the conversion script `script/convert.py` does.
 
-Before running the script, make sure you have Python3 up and running and install the dependencies.
+Before running the script, make sure you have Python 3 up and running and install the dependencies.
 
 	python3 -m venv venv
 	source venv/bin/activate
 
-	pip install -r requirements
+	pip install -r requirements.txt
 
 Then run the conversion script by passing the taxonomy YAML files and an optional output folder (which is `assets/data` by default.
 
@@ -84,7 +84,7 @@ After conversion, these files must be added and committed in order to show up on
 
 ## How to contribute
 
-If you have write access to this repository, create a branch, change stuff, and push the branch to Github.
+If you have write access to this repository, create a branch, change stuff, and push the branch to GitHub.
 
 	git branch my_concept_proposal
 	git checkout my_concept_proposal
