@@ -20,6 +20,15 @@ scam:
     Scam denotes a fraudulent or deceptive act or operation.
   seeAlso: https://www.merriam-webster.com/dictionary/scam
 
+extortion:
+  id: extortion
+  type: concept
+  prefLabel: Extortion
+  description: >
+    Extortion denotes the act or practice of extorting especially money or other property.
+  seeAlso: https://www.merriam-webster.com/dictionary/extortion
+  narrower: sextortion
+
 sextortion:
   id: sextortion
   type: concept
@@ -30,6 +39,7 @@ sextortion:
     exploitation in which threatened release of sexual images or information is
     the means of coercion.
   seeAlso: https://en.wikipedia.org/wiki/Sextortion
+  broader: extortion
 
 phishing:
   id: phishing

@@ -182,6 +182,14 @@ miner:
     creates blocks to be added to the blockchain digital ledger.
   broader: service
 
+mining-service:
+  id: mining-service
+  type: concept
+  prefLabel: Mining as a Service
+  description: >
+    A software and computing infrastructure that allows mining of cryptoassets in the cloud
+  broader: miner
+
 gambling:
   id: gambling
   type: concept
