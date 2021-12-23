@@ -2,8 +2,8 @@ scheme:
   baseurl: /taxonomies/abuses
   csvfile: /assets/data/abuses.csv
   type: conceptScheme
-  version: 0.2
-  lastmod: 2021-10-06
+  version: 0.2.1
+  lastmod: 2021-12-21
   title: Abuse Taxonomy
   creator: INTERPOL Darknet and Cryptocurrencies Working Group
   description: >
@@ -112,3 +112,22 @@ sanction:
   description: >
       An entry appears on a sanction list published by governments and international
       authorities to combat illegal activities.
+
+extremism:
+  id: extremism
+  type: concept
+  prefLabel: Violent Extremism
+  description: >
+    Serially or systematically dehumanize others, frequently express hate speech towards opponents,
+    perform selective/ individual acts of violence, actively separate targets from society, active
+    discrimination.
+  seeAlso: https://gifct.org/wp-content/uploads/2021/07/GIFCT-TaxonomyReport-2021.pdf
+
+terrorism:
+  id: terrorism
+  type: concept
+  prefLabel: Terrorism
+  description: >
+    Endorse, promote, or enact physical violence towards out-, in-group or infrastructure.
+  seeAlso: https://gifct.org/wp-content/uploads/2021/07/GIFCT-TaxonomyReport-2021.pdf
+
