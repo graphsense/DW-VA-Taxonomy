@@ -182,8 +182,8 @@ miner:
     creates blocks to be added to the blockchain digital ledger.
   broader: service
 
-mining-service:
-  id: mining-service
+mining_service:
+  id: mining_service
   type: concept
   prefLabel: Mining as a Service
   description: >
