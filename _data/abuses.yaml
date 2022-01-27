@@ -3,7 +3,7 @@ scheme:
   csvfile: /assets/data/abuses.csv
   type: conceptScheme
   version: 0.2.1
-  lastmod: 2021-12-21
+  lastmod: 2022-01-27
   title: Abuse Taxonomy
   creator: INTERPOL Darknet and Cryptocurrencies Working Group
   description: >

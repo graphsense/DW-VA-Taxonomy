@@ -2,8 +2,8 @@ scheme:
   baseurl: /taxonomies/entities
   csvfile: /assets/data/entities.csv  
   type: conceptScheme
-  version: 0.2
-  lastmod: 2021-10-06
+  version: 0.2.1
+  lastmod: 2022-01-27
   title: Entity Taxonomy
   creator: INTERPOL Darknet and Cryptocurrencies Working Group
   description: >
@@ -286,8 +286,18 @@ defi_derivatives:
   description: >
     A contract between two or more parties whose value is based on an agreed-upon
     underlying financial (crypto)asset.
+  broader: defi
 
 # Specific concepts: items
+
+item:
+  id: item
+  type: concept
+  prefLabel: Digital Item
+  description: >
+    An intangible asset or piece of media that doesn't have physical form
+    or substance and can be sold or shared online.
+  narrower: [collectible]
 
 collectible:
   id: collectible
