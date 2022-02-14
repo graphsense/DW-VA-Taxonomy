@@ -150,10 +150,10 @@ messaging_service:
   seeAlso: https://en.wikipedia.org/wiki/Instant_messaging
   broader: service
 
-mixer:
-  id: mixer
+mixing_service:
+  id: mixing_service
   type: concept
-  prefLabel: Mixer
+  prefLabel: Mixing Service
   description: >
     A tumbler or mixing service is a service offered to mix potentially identifiable
     or 'tainted' cryptoasset funds with others, so as to obscure the trail back to the
