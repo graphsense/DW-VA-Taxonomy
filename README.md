@@ -2,7 +2,7 @@
 
 This repository contains taxonomies covering common types of entities found in Dark Web and Virtual Assets ecosystems, as well as abusive, possibly criminal behaviors found in real-world investigations.
 
-Taxonomies are defined as [YAML][yaml] files and automatically rendered as a human-readable Website by using the [Jekyll][jekyll] static site generator: https://graphsense.info/DW-VA-Taxonomy/
+Taxonomies are defined as [YAML][yaml] files and automatically rendered as a human-readable Website by using the [Jekyll][jekyll] static site generator: https://graphsense.github.io/DW-VA-Taxonomy/
 
 ## How to run the Website locally
 
