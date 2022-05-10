@@ -131,3 +131,11 @@ terrorism:
     Endorse, promote, or enact physical violence towards out-, in-group or infrastructure.
   seeAlso: https://gifct.org/wp-content/uploads/2021/07/GIFCT-TaxonomyReport-2021.pdf
 
+dark_web:
+  id: dark_web
+  type: concept
+  prefLabel: Dark web
+  description: >
+    Illegal Web content or service offerings exposed via darknets overlay networks, which
+    are only through networks such as Tor.
+  seeAlso: https://en.wikipedia.org/wiki/Dark_web
