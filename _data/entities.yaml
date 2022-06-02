@@ -42,6 +42,7 @@ user:
     A user is a person who utilizes Darknet or Cryptoasset infrastructures
     and / or offered services.
   broader: entity
+  narrower: [user, perpetrator]
 
 item:
   id: item
@@ -62,6 +63,27 @@ service:
   broader: entity
   narrower: [exchange, filesharing, index, market, messaging_service, mixing_service, search_engine, shop]
 
+# Specific concepts: user
+
+victim:
+  id: victim
+  type: concept
+  prefLabel: Victim
+  description: >
+    Someone or something that has been hurt, damaged, or killed or has suffered,
+    either because of the actions of someone or something else, or because of illness
+    or chance.
+  seeAlso: https://dictionary.cambridge.org/dictionary/english/victim
+  broader: user
+
+perpetrator:
+  id: perpetrator
+  type: concept
+  prefLabel: Perpetrator
+  description: >
+    Someone who has committed a crime or a violent or harmful act.
+  seeAlso: https://dictionary.cambridge.org/dictionary/english/perpetrator
+  broader: user
 
 # Specific concepts: services
 
@@ -161,6 +183,7 @@ mixing_service:
     usually bitcoin (hence Bitcoin mixer), since the currencies provide a public ledger of all transactions.
   seeAlso: https://en.wikipedia.org/wiki/Cryptocurrency_tumbler
   broader: service
+  narrower: coinjoin
 
 coinjoin:
   id: coinjoin
