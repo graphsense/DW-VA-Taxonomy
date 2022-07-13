@@ -274,6 +274,26 @@ atm:
     A physical kiosk that allows users to exchange cryptoassets and fiat currencies.
   broader: service
 
+hosting:
+  id: hosting
+  type: concept
+  prefLabel: Hosting Service Provider
+  description: >
+    A hosting service provider (HSP) is an IT service company or partner that provides
+    remote IT resources and/or services
+  broader: service
+
+vpn:
+  id: vpn
+  type: concept
+  prefLabel: VPN Service Provider
+  description: >
+    A virtual private network (VPN) service provides a proxy server to help users
+    bypass Internet censorship such as geoblocking and users who want to protect
+    their communications against data profiling or MitM attacks on hostile networks.
+  seeAlso: https://en.wikipedia.org/wiki/VPN_service
+  broader: service
+
 defi:
   id: defi
   type: concept
