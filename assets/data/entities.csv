@@ -6,6 +6,7 @@ item,https://ikna.io/DW-VA-Taxonomy/taxonomies/entities#item,Digital Item,An int
 service,https://ikna.io/DW-VA-Taxonomy/taxonomies/entities#service,Service,A service refers to some software functionality or a set of software functionalities that can be used by different actors for difffent purposes.
 victim,https://ikna.io/DW-VA-Taxonomy/taxonomies/entities#victim,Victim,"Someone or something that has been hurt, damaged, or killed or has suffered, either because of the actions of someone or something else, or because of illness or chance."
 perpetrator,https://ikna.io/DW-VA-Taxonomy/taxonomies/entities#perpetrator,Perpetrator,Someone who has committed a crime or a violent or harmful act.
+donation,https://ikna.io/DW-VA-Taxonomy/taxonomies/entities#donation,Donation,Someone or something receiving donations in cryptoassets.
 exchange,https://ikna.io/DW-VA-Taxonomy/taxonomies/entities#exchange,Exchange,"A centralized cryptocurrency exchange (CEX) is a business that allows customers to trade cryptocurrencies or digital currencies for other assets, such as conventional fiat money or other digital currencies."
 wallet_service,https://ikna.io/DW-VA-Taxonomy/taxonomies/entities#wallet_service,Wallet Service,A wallet service is a software or web service that custodizes and utilizes cryptoasset keys on behalf of their users.
 escrow_wallet,https://ikna.io/DW-VA-Taxonomy/taxonomies/entities#escrow_wallet,Escrow Wallet,An escrow service is a mediator service that keeps the money for a transaction in safekeeping until the coins are handed over.

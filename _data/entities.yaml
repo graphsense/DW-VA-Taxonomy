@@ -42,7 +42,7 @@ user:
     A user is a person who utilizes Darknet or Cryptoasset infrastructures
     and / or offered services.
   broader: entity
-  narrower: [user, perpetrator]
+  narrower: [user, perpetrator, donation]
 
 item:
   id: item
@@ -83,6 +83,14 @@ perpetrator:
   description: >
     Someone who has committed a crime or a violent or harmful act.
   seeAlso: https://dictionary.cambridge.org/dictionary/english/perpetrator
+  broader: user
+
+donation:
+  id: donation
+  type: concept
+  prefLabel: Donation
+  description: >
+    Someone or something receiving donations in cryptoassets.
   broader: user
 
 # Specific concepts: services
