@@ -42,6 +42,7 @@ user:
     A user is a person who utilizes Darknet or Cryptoasset infrastructures
     and / or offered services.
   broader: entity
+  narrower: [user, perpetrator, donation]
 
 item:
   id: item
@@ -62,6 +63,35 @@ service:
   broader: entity
   narrower: [exchange, filesharing, index, market, messaging_service, mixing_service, search_engine, shop]
 
+# Specific concepts: user
+
+victim:
+  id: victim
+  type: concept
+  prefLabel: Victim
+  description: >
+    Someone or something that has been hurt, damaged, or killed or has suffered,
+    either because of the actions of someone or something else, or because of illness
+    or chance.
+  seeAlso: https://dictionary.cambridge.org/dictionary/english/victim
+  broader: user
+
+perpetrator:
+  id: perpetrator
+  type: concept
+  prefLabel: Perpetrator
+  description: >
+    Someone who has committed a crime or a violent or harmful act.
+  seeAlso: https://dictionary.cambridge.org/dictionary/english/perpetrator
+  broader: user
+
+donation:
+  id: donation
+  type: concept
+  prefLabel: Donation
+  description: >
+    Someone or something receiving donations in cryptoassets.
+  broader: user
 
 # Specific concepts: services
 
@@ -161,6 +191,7 @@ mixing_service:
     usually bitcoin (hence Bitcoin mixer), since the currencies provide a public ledger of all transactions.
   seeAlso: https://en.wikipedia.org/wiki/Cryptocurrency_tumbler
   broader: service
+  narrower: coinjoin
 
 coinjoin:
   id: coinjoin
@@ -249,6 +280,26 @@ atm:
   prefLabel: Cryptoasset ATM
   description: >
     A physical kiosk that allows users to exchange cryptoassets and fiat currencies.
+  broader: service
+
+hosting:
+  id: hosting
+  type: concept
+  prefLabel: Hosting Service Provider
+  description: >
+    A hosting service provider (HSP) is an IT service company or partner that provides
+    remote IT resources and/or services
+  broader: service
+
+vpn:
+  id: vpn
+  type: concept
+  prefLabel: VPN Service Provider
+  description: >
+    A virtual private network (VPN) service provides a proxy server to help users
+    bypass Internet censorship such as geoblocking and users who want to protect
+    their communications against data profiling or MitM attacks on hostile networks.
+  seeAlso: https://en.wikipedia.org/wiki/VPN_service
   broader: service
 
 defi:
