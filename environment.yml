@@ -1,0 +1,7 @@
+name: DW-VA-Taxonomy
+channels:
+- anaconda
+- conda-forge
+- defaults
+dependencies:
+- PyYAML>=5.4

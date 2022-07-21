@@ -11,13 +11,31 @@ Checkout this git repository to your local machine
 	git clone git@github.com:graphsense/DW-VA-Taxonomy.git
 	cd DW-VA-Taxonomy
 
-Use docker to incrementally compile and watch the site
+Install ruby as described [here](https://jekyllrb.com/docs/installation/macos/)
 
- 	docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" --env JEKYLL_ENV=development -p 4000:4000 jekyll/jekyll:4 jekyll serve
+	brew install chruby ruby-install
+	ruby-install ruby
 
-Access the taxonomy website locally using your browser
+	echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" >> ~/.zshrc
+	echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" >> ~/.zshrc
+	echo "chruby ruby-3.1.2" >> ~/.zshrc
 
-	http://0.0.0.0:4000/DW-VA-Taxonomy/
+	ruby -v
+
+Install Jekyll
+
+	gem install jekyll bundler
+
+Install local bundles
+
+	bundle install
+	bundle add webrick
+	
+Run website in local development mode
+
+	bundle exec jekyll serve --watch
+
+Website should run in http://127.0.0.1:4000/DW-VA-Taxonomy/
 
 ## How to create / modify / delete concept definitions
 
@@ -61,12 +79,9 @@ The taxonomy YAML files in `_data` feed the [Jekyll static Website generator][je
 
 In order to provide machine-processable, downloadable taxonomy representations, they must first be converted into (a) commonly accepted format(s) and provided as downloadable files. This is what the conversion script `script/convert.py` does.
 
-Before running the script, make sure you have Python 3 up and running and install the dependencies.
+Before running the script, make sure you have Python 3 up and running and install the dependencies using [conda](https://docs.conda.io/en/latest/).
 
-	python3 -m venv venv
-	source venv/bin/activate
-
-	pip install -r requirements.txt
+	conda env create -f environment.yml
 
 Then run the conversion script by passing the taxonomy YAML files and an optional output folder (which is `assets/data` by default.
 
