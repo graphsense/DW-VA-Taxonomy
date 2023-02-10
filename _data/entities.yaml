@@ -44,15 +44,6 @@ user:
   broader: entity
   narrower: [user, perpetrator, donation]
 
-item:
-  id: item
-  type: concept
-  prefLabel: Item
-  description: >
-    A digital or non-digital item.
-  broader: entity
-  narrower: collectible
-
 service:
   id: service
   type: concept
