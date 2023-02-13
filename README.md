@@ -1,3 +1,9 @@
+# This repository is DEPRECATED
+
+The [graphsense-tagpack tool](https://github.com/graphsense/graphsense-tagpack-tool), starting from **version 23.03**, ships with inbuilt taxonomies (a subset of the Interpol definitions). If you want to use the graphsense default taxonomies use these built-in ones. If you need special taxonomies the tagpack tool still provides the function to load your own taxonomies via a config file.
+
+If you need the entire taxonomy the Interpol repository this repository was forked from (https://github.com/INTERPOL-Innovation-Centre/DW-VA-Taxonomy) direcly.
+
 # Dark Web and Virtual Assets Taxonomies
 
 This repository contains taxonomies covering common types of entities found in Dark Web and Virtual Assets ecosystems, as well as abusive, possibly criminal behaviors found in real-world investigations.
